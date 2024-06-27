@@ -1,0 +1,55 @@
+### Register
+POST http://localhost:8080/api/users/register
+Accept: application/json
+Content-Type: application/json
+
+{
+  "email":"halo@gmail.com",
+  "password": "mypassword",
+  "name":"halo my name"
+}
+
+### Login (token expire in 1 hour)
+POST http://localhost:8080/api/users/login
+Accept: application/json
+Content-Type: application/json
+
+{
+"email":"halo@gmail.com",
+"password": "mypassword"
+}
+
+### Create Post
+POST http://localhost:8080/api/posts
+Accept: application/json
+Content-Type: application/json
+Authorization: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxIiwiaWF0IjoxNzE5MzE0MTY2LCJleHAiOjE3MTkzMTQ0NjZ9.r9OTv3E80fr-n-VvWsFChMlfmiXqRSKvzKx_PoNDlZU
+
+{
+  "content": "hello world"
+}
+
+### Update Post
+PUT http://localhost:8080/api/posts/1
+Accept: application/json
+Content-Type: application/json
+Authorization: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxIiwiaWF0IjoxNzE5MzE0ODY2LCJleHAiOjE3MTkzMTUxNjZ9._zSwt7_lt7eS3S4F3lOwmuAd1Yf9HgKNJZiCqiQYjT8
+
+{
+  "content": "not hello world"
+}
+
+### Delete Post
+DELETE http://localhost:8080/api/posts/2
+Accept: application/json
+Authorization: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxIiwiaWF0IjoxNzE5MzE0ODY2LCJleHAiOjE3MTkzMTUxNjZ9._zSwt7_lt7eS3S4F3lOwmuAd1Yf9HgKNJZiCqiQYjT8
+
+
+### Get All Posts
+GET http://localhost:8080/api/posts
+Accept: application/json
+
+### Get A Post
+GET http://localhost:8080/api/postf
+Accept: application/json
+
